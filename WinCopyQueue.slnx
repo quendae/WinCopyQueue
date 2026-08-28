@@ -1,0 +1,10 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/WinCopyQueue.App/WinCopyQueue.App.csproj" />
+    <Project Path="src/WinCopyQueue.Core/WinCopyQueue.Core.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/WinCopyQueue.App.SmokeTests/WinCopyQueue.App.SmokeTests.csproj" />
+    <Project Path="tests/WinCopyQueue.Core.SmokeTests/WinCopyQueue.Core.SmokeTests.csproj" />
+  </Folder>
+</Solution>
