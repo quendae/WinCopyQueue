@@ -2,6 +2,8 @@
 
 WinCopyQueue to działająca w trayu integracja z Explorerem Windows. Wykonuje transfery sekwencyjnie: jedna sesja po drugiej i jeden plik naraz. Nie ma stałego głównego okna — kompaktowy podgląd kolejki pojawia się dopiero po dodaniu transferu.
 
+Kompletny opis projektu przeznaczony dla modeli językowych i narzędzi programistycznych znajduje się w pliku [LLMS.md](LLMS.md).
+
 ## Aktualny zakres MVP
 
 - kopiowanie i przenoszenie plików oraz całych folderów,
