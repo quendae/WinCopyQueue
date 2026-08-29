@@ -2,145 +2,149 @@
   <img src="src/WinCopyQueue.App/Assets/logo-full.png" alt="WinCopyQueue" width="420">
 </p>
 
-# WinCopyQueue
-
-WinCopyQueue dodaje do Eksploratora Windows prostą kolejkę kopiowania i przenoszenia plików. Zamiast uruchamiać kilka transferów równocześnie, wykonuje je po kolei — jedna sesja po drugiej i jeden plik naraz.
-
-Program działa w zasobniku systemowym i nie zajmuje ekranu stałym oknem. Panel kolejki pojawia się dopiero po dodaniu transferu, można go w każdej chwili ukryć, a kopiowanie będzie działać dalej.
-
-## Pobieranie
-
-Aktualna wersja: **1.0.0**
-
-- [Pobierz instalator WinCopyQueue 1.0.0](https://github.com/quendae/WinCopyQueue/releases/download/v1.0.0/WinCopyQueue-Setup-1.0.0-x64.exe)
-- [Pobierz pojedynczy plik WinCopyQueue.exe](https://github.com/quendae/WinCopyQueue/releases/download/v1.0.0/WinCopyQueue.exe)
-- [Zobacz wydanie v1.0.0](https://github.com/quendae/WinCopyQueue/releases/tag/v1.0.0)
-
-WinCopyQueue działa na **Windows 10 1809 lub nowszym**, w tym na Windows 11. Instalator jest przeznaczony dla bieżącego użytkownika i nie wymaga uprawnień administratora.
-
-> Repozytorium nie zawiera obecnie pliku `LICENSE`.
-
-## Jak to działa
-
-1. Uruchom `WinCopyQueue.exe`.
-2. W Eksploratorze skopiuj lub wytnij pliki zwykłym `Ctrl+C` / `Ctrl+X`.
-3. W folderze docelowym użyj `Ctrl+V` albo wybierz z menu kontekstowego **Wklej z WinCopyQueue**.
-
-Jeżeli w kolejce trwa już transfer, następny zostanie po prostu dopisany na końcu. Dzięki temu kilka dużych operacji nie walczy jednocześnie o ten sam dysk.
-
-Na Windows 11 statyczna pozycja menu może znajdować się pod **Pokaż więcej opcji**.
-
 <p align="center">
-  <img src="docs/images/WinCopyQueue_screenshot.png" alt="WinCopyQueue podczas aktywnego transferu" width="480">
+  <strong>English</strong> · <a href="README.pl.md">Polski</a> · <a href="README.de.md">Deutsch</a> · <a href="README.fr.md">Français</a> · <a href="README.es.md">Español</a> · <a href="README.pt.md">Português</a> · <a href="README.zh-CN.md">简体中文</a> · <a href="README.ja.md">日本語</a>
 </p>
 
-## Najważniejsze funkcje
+# WinCopyQueue
 
-- kopiowanie i przenoszenie pojedynczych plików oraz całych folderów,
-- wiele niezależnych sesji we wspólnej, sekwencyjnej kolejce,
-- pauza i wznowienie całej kolejki oraz pojedynczych plików,
-- anulowanie całej sesji albo wybranego pliku,
-- anulowanie sesji bez usuwania plików, które zostały już poprawnie zapisane,
-- obsługa konfliktów z porównaniem ścieżek, rozmiarów i dat modyfikacji,
-- decyzje **Zastąp**, **Pomiń** lub **Anuluj sesję**, z możliwością zastosowania wyboru do kolejnych konfliktów,
-- kompaktowy panel z bieżącym plikiem, postępem, liczbą plików i prędkością transferu,
-- rozwijana, wirtualizowana lista wszystkich plików i ich stanów,
-- historia ukończonych, anulowanych i błędnych sesji,
-- powiadomienia systemowe o dodaniu, zakończeniu i błędach transferu,
-- opcjonalny autostart,
-- osiem języków: polski, angielski, niemiecki, francuski, hiszpański, portugalski, chiński uproszczony i japoński.
+WinCopyQueue adds a simple copy and move queue to Windows Explorer. Instead of running several transfers at the same time, it processes them sequentially — one session after another and one file at a time.
 
-## Bezpieczniejsze kopiowanie i przenoszenie
+The app lives in the system tray and does not keep a permanent main window on screen. The compact queue panel appears only when a transfer is added, can be hidden at any time, and transfers continue in the background.
 
-WinCopyQueue nie zapisuje niekompletnego pliku od razu pod jego docelową nazwą. Dane trafiają najpierw do tymczasowego pliku `*.queue-part-*`, a dopiero po poprawnym zakończeniu transferu plik zostaje opublikowany pod właściwą nazwą.
+## Download
 
-Dla zwykłego kopiowania można dodatkowo włączyć weryfikację **SHA-256**. Program porównuje wtedy hash danych źródłowych z ponownie odczytanym plikiem docelowym.
+Current version: **1.0.0**
 
-Przy przenoszeniu pomiędzy różnymi woluminami weryfikacja jest wykonywana automatycznie przed usunięciem źródła — niezależnie od ustawienia w interfejsie. Jeżeli kopiowanie, weryfikacja albo finalizacja się nie powiedzie, źródło pozostaje nienaruszone.
+- [Download WinCopyQueue 1.0.0 installer](https://github.com/quendae/WinCopyQueue/releases/download/v1.0.0/WinCopyQueue-Setup-1.0.0-x64.exe)
+- [Download standalone WinCopyQueue.exe](https://github.com/quendae/WinCopyQueue/releases/download/v1.0.0/WinCopyQueue.exe)
+- [View release v1.0.0](https://github.com/quendae/WinCopyQueue/releases/tag/v1.0.0)
 
-## Panel kolejki i tray
+WinCopyQueue supports **Windows 10 1809 or newer**, including Windows 11. The installer is per-user and does not require administrator privileges.
 
-Panel otwiera się automatycznie po dodaniu transferu i pojawia się przy prawym dolnym rogu ekranu bez odbierania fokusu Eksploratorowi. Można go ukryć przyciskiem minimalizacji; transfery będą kontynuowane w tle.
+> This repository currently does not include a `LICENSE` file.
 
-Dwuklik ikony w trayu lub polecenie **Pokaż kolejkę** otwiera panel ponownie. Z menu traya można też wstrzymać lub wznowić całą kolejkę, przełączyć autostart, naprawić integrację z Eksploratorem oraz zamknąć program.
+## How it works
 
-## Konflikty plików
+1. Start `WinCopyQueue.exe`.
+2. In Windows Explorer, copy or cut files normally with `Ctrl+C` / `Ctrl+X`.
+3. In the destination folder, press `Ctrl+V` or choose **Paste with WinCopyQueue** from the context menu.
 
-Jeżeli w miejscu docelowym istnieje plik o tej samej nazwie, WinCopyQueue pokazuje oba pliki wraz z ich rozmiarami i datami modyfikacji. Dostępne są trzy decyzje:
+If another transfer is already running, the new one is simply added to the end of the queue. This prevents several large operations from competing for the same disk at once.
 
-- **Zastąp**,
-- **Pomiń**,
-- **Anuluj sesję**.
+On Windows 11, the static context-menu entry may appear under **Show more options**.
 
-Zastąpienie lub pominięcie można zastosować również do wszystkich kolejnych konfliktów w tej samej sesji.
+<p align="center">
+  <img src="docs/images/WinCopyQueue_screenshot.png" alt="WinCopyQueue during an active transfer" width="480">
+</p>
 
-## Ustawienia i diagnostyka
+## Main features
 
-Ustawienia użytkownika są zapisywane w:
+- copy and move individual files or complete folders,
+- multiple independent sessions in one sequential queue,
+- pause and resume the whole queue or individual files,
+- cancel an entire session or a selected file,
+- cancel a session without removing files that were already copied successfully,
+- conflict handling with path, size, and modification-date comparison,
+- **Replace**, **Skip**, and **Cancel session** decisions, with the option to apply a choice to later conflicts,
+- compact queue panel with current file, progress, file count, and transfer speed,
+- expandable virtualized list of all files and their states,
+- history of completed, canceled, and failed sessions,
+- system notifications for added, completed, and failed transfers,
+- optional startup with Windows,
+- eight interface languages: English, Polish, German, French, Spanish, Portuguese, Simplified Chinese, and Japanese.
+
+## Safer copy and move operations
+
+WinCopyQueue does not write an incomplete file directly under its final destination name. Data is first written to a temporary `*.queue-part-*` file and published under the final name only after the transfer completes successfully.
+
+For normal copy operations, optional **SHA-256** verification can be enabled. WinCopyQueue hashes the source while copying and then reads the destination again to compare the result.
+
+When moving files between different volumes, verification is performed automatically before the source is deleted, regardless of the UI setting. If copying, verification, or finalization fails, the source remains intact.
+
+## Queue panel and tray
+
+The queue panel opens automatically when a transfer is added and appears near the bottom-right corner of the screen without stealing focus from Explorer. It can be minimized while transfers continue in the background.
+
+Double-clicking the tray icon or choosing **Show queue** opens the panel again. The tray menu can also pause or resume the whole queue, toggle startup, repair Explorer integration, and exit the application.
+
+## File conflicts
+
+If a file with the same name already exists at the destination, WinCopyQueue shows both files together with their sizes and modification dates. Three actions are available:
+
+- **Replace**,
+- **Skip**,
+- **Cancel session**.
+
+Replace or Skip can also be applied to all later conflicts in the same session.
+
+## Settings and diagnostics
+
+User settings are stored in:
 
 ```text
 %LOCALAPPDATA%\WinCopyQueue\settings.json
 ```
 
-Dziennik diagnostyczny znajduje się w:
+The diagnostic log is stored in:
 
 ```text
 %LOCALAPPDATA%\WinCopyQueue\WinCopyQueue.log
 ```
 
-Wybrany język oraz ustawienie weryfikacji SHA-256 są zapamiętywane pomiędzy uruchomieniami.
+The selected language and SHA-256 verification preference are remembered between runs.
 
-## Wiersz poleceń
+## Command line
 
-WinCopyQueue może przyjmować zlecenia również bezpośrednio z CLI:
+WinCopyQueue can also receive transfer requests directly from the command line:
 
 ```powershell
-WinCopyQueue.exe --copy "D:\Cel" "D:\Plik.txt" "D:\Folder"
-WinCopyQueue.exe --move "D:\Cel" "D:\Plik.txt"
-WinCopyQueue.exe --paste "D:\Cel"
+WinCopyQueue.exe --copy "D:\Destination" "D:\File.txt" "D:\Folder"
+WinCopyQueue.exe --move "D:\Destination" "D:\File.txt"
+WinCopyQueue.exe --paste "D:\Destination"
 ```
 
-Kolejne uruchomienia aplikacji nie tworzą osobnych kolejek. Polecenia są przekazywane do głównego procesu przez named pipe.
+Launching the application again does not create another queue. Commands are forwarded to the primary process through a named pipe.
 
-## Budowanie projektu
+## Building the project
 
-Wymagany jest .NET 10 SDK.
+.NET 10 SDK is required.
 
 ```powershell
 dotnet restore WinCopyQueue.slnx --configfile NuGet.Config
 dotnet build WinCopyQueue.slnx --no-restore -c Release
 ```
 
-Uruchomienie aplikacji z repozytorium:
+Run the application from the repository:
 
 ```powershell
 dotnet run --project src\WinCopyQueue.App\WinCopyQueue.App.csproj --no-restore
 ```
 
-### Testy
+### Tests
 
 ```powershell
 dotnet run --project tests\WinCopyQueue.Core.SmokeTests\WinCopyQueue.Core.SmokeTests.csproj --no-build -c Release
 dotnet run --project tests\WinCopyQueue.App.SmokeTests\WinCopyQueue.App.SmokeTests.csproj --no-build -c Release
 ```
 
-Testy rdzenia wykonują rzeczywiste operacje na odizolowanych plikach tymczasowych i sprawdzają m.in. kolejność sesji, konflikty, SHA-256, pauzę, anulowanie i sterowanie pojedynczymi plikami. Testy aplikacji obejmują WPF, lokalizację, dialog konfliktu oraz scenariusze zamykania aplikacji.
+Core smoke tests perform real operations on isolated temporary files and cover session ordering, conflicts, SHA-256, pause/resume, cancellation, history cleanup, and per-file controls. Application smoke tests cover WPF, localization, the conflict dialog, and shutdown scenarios.
 
-### Instalator
+### Installer
 
-Pakiet instalacyjny buduje skrypt:
+Build the installer with:
 
 ```powershell
 .\installer\Build-Installer.ps1
 ```
 
-Skrypt publikuje samowystarczalną wersję `win-x64` i tworzy instalator przy użyciu Inno Setup 7. Gotowe binaria są publikowane w sekcji [Releases](https://github.com/quendae/WinCopyQueue/releases), a nie przechowywane w repozytorium.
+The script publishes a self-contained `win-x64` build and creates an installer with Inno Setup 7. Release binaries are published under [Releases](https://github.com/quendae/WinCopyQueue/releases) rather than stored in the repository.
 
-## Struktura projektu
+## Project structure
 
 ```text
-src/WinCopyQueue.Core/       logika kolejki i operacji na plikach
-src/WinCopyQueue.App/        aplikacja WPF, tray i integracja z Explorerem
-tests/                       smoke testy rdzenia i aplikacji
-installer/                   skrypt oraz definicja instalatora Inno Setup
+src/WinCopyQueue.Core/       queue logic and file operations
+src/WinCopyQueue.App/        WPF app, tray, and Explorer integration
+tests/                       core and application smoke tests
+installer/                   Inno Setup definition and build script
 ```
