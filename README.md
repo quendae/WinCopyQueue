@@ -139,5 +139,3 @@ src/WinCopyQueue.App/        aplikacja WPF, tray i integracja z Explorerem
 tests/                       smoke testy rdzenia i aplikacji
 installer/                   skrypt oraz definicja instalatora Inno Setup
 ```
-
-Bardziej szczegółowy opis architektury, stanów, niezmienników i zasad przydatnych przy dalszym rozwijaniu projektu znajduje się w pliku [`.LLMS.md`](.LLMS.md).
