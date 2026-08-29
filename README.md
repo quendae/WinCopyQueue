@@ -34,7 +34,8 @@ Na Windows 11 statyczna pozycja menu może znajdować się pod **Pokaż więcej 
 
 - kopiowanie i przenoszenie pojedynczych plików oraz całych folderów,
 - wiele niezależnych sesji we wspólnej, sekwencyjnej kolejce,
-- pauza i wznowienie całej kolejki, pojedynczej sesji oraz pojedynczych plików,
+- pauza i wznowienie całej kolejki oraz pojedynczych plików,
+- anulowanie całej sesji albo wybranego pliku,
 - anulowanie sesji bez usuwania plików, które zostały już poprawnie zapisane,
 - obsługa konfliktów z porównaniem ścieżek, rozmiarów i dat modyfikacji,
 - decyzje **Zastąp**, **Pomiń** lub **Anuluj sesję**, z możliwością zastosowania wyboru do kolejnych konfliktów,
