@@ -30,6 +30,10 @@ Jeżeli w kolejce trwa już transfer, następny zostanie po prostu dopisany na k
 
 Na Windows 11 statyczna pozycja menu może znajdować się pod **Pokaż więcej opcji**.
 
+<p align="center">
+  <img src="docs/images/WinCopyQueue_screenshot.png" alt="WinCopyQueue podczas aktywnego transferu" width="480">
+</p>
+
 ## Najważniejsze funkcje
 
 - kopiowanie i przenoszenie pojedynczych plików oraz całych folderów,
